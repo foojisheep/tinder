@@ -1,0 +1,68 @@
+{
+    "recommendations": [
+      {
+        "id": 1,
+        "name": "Johnathan Wick",
+        "gender": "Male",
+        "city": "New York",
+        "university": "New York Martial Arts",
+        "interests": ["Playing with his dog", "Running"],
+        "imagePath": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/keanu-reeves-sad.jpg?q=50&fit=contain&w=750&h=415&dpr=1.5"
+      },
+      {
+        "id": 2,
+        "name": "Winston Scott",
+        "gender": "Male",
+        "city": "New York",
+        "university": "The Continental University",
+        "interests": ["Giving advice to John Wick", "Cooking"],
+        "imagePath": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/11/Ian-McShane-as-Winston-in-the-John-Wick-films.jpg?q=50&fit=crop&w=750&dpr=1.5"
+      },
+      {
+        "id": 3,
+        "name": "Charon",
+        "gender": "Male",
+        "city": "New York",
+        "university": "The Continental University",
+        "interests": ["Working at Continental", "Reading"],
+        "imagePath": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/lance-reddick-as-charon-the-continental-concierge-in-john-wick-4-1.jpg?q=50&fit=crop&w=750&dpr=1.5"
+      },
+      {
+        "id": 4,
+        "name": "Bowery King",
+        "gender": "Male",
+        "city": "New York",
+        "university": "The Streets University",
+        "interests": ["Defying rules", "Looking after his pigeons"],
+        "imagePath": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/03/john-wick-chapter-4-bowery-king-laurence-fishburne-3.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5"
+      },
+      {
+        "id": 5,
+        "name": "Ms. Perkins",
+        "gender": "Female",
+        "city": "New York",
+        "university": "The Hot Assassins University",
+        "interests": ["Killing people for money"],
+        "imagePath": "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/06/John-Wick-1.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5"
+      },
+      {
+        "id": 6,
+        "name": "Akira Shimazu",
+        "gender": "Female",
+        "city": "Osaka",
+        "university": "Osake Continental University",
+        "interests": ["Protect Continental guest"],
+        "imagePath": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/rina-sawayama-as-akira-in-john-wick-4.jpg?q=50&fit=crop&w=750&dpr=1.5"
+      },
+      {
+        "id": 7,
+        "name": "Mr. Nobody",
+        "gender": "Male",
+        "city": "New York",
+        "university": "Berlin University",
+        "interests": ["Tracking down and killing targets","Playing with his dog"],
+        "imagePath": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/03/john-wick-chapter-4-mister-nobody-2.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5"
+      }
+    ]
+  }
+  

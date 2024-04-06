@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import SwipeFeature from './components/SwipeFeature';
 import Login from './components/Login';
 
 const App = () => {
@@ -8,10 +9,18 @@ const App = () => {
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
   };
-  
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <div className="App">
-        <Login onLoginSuccess={handleLoginSuccess} />
+        {isLoggedIn ? (
+          <SwipeFeature onLogout={handleLogout} /> 
+        ) : (
+          <Login onLoginSuccess={handleLoginSuccess} />
+        )}
     </div>
   );
 };
