@@ -12,9 +12,145 @@ div {
   margin-bottom: 30px;
 }
 
-button {
-  margin-left: 10px;
+.login-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
- img {
-  width: 500px;
- }
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.recommendation-container {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.recommendation-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.recommendation-info {
+  margin-bottom: 10px;
+}
+
+.recommendation-info p {
+  margin: 5px 0;
+}
+
+.recommendation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommendation-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recommendation-buttons button.yay {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.recommendation-buttons button.nay {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.recommendation-buttons button:hover {
+  opacity: 0.8;
+}
+
+.recommendation-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.recommendation-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.recommendation-info {
+  margin-bottom: 10px;
+}
+
+.recommendation-info p {
+  margin: 5px 0;
+}
+
+.recommendation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommendation-buttons button {
+  padding: 8px 16px; /* Adjusted button size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recommendation-buttons button.yay {
+  background-color: #34d399; /* Green color for Yay button */
+  color: #fff;
+}
+
+.recommendation-buttons button.nay {
+  background-color: #f87171; /* Red color for Nay button */
+  color: #fff;
+}
+
+.recommendation-buttons button:hover {
+  opacity: 0.8;
+}

@@ -4,6 +4,7 @@ import { LoginFormProps } from '../interfaces';
 const Login = ({ onLoginSuccess }: LoginFormProps) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleLogin = async () => {
     try {
@@ -18,21 +19,30 @@ const Login = ({ onLoginSuccess }: LoginFormProps) => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
+      {error && <p className="error-message">{error}</p>}
+      <form>
+        <div className="form-group">
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button type="button" onClick={handleLogin}>Login</button>
+      </form>
     </div>
   );
 };

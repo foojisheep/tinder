@@ -5,7 +5,6 @@ export const SessionContext = createContext<SessionData>({
   isLoggedIn: false,
 });
 
-
 interface SessionProviderProps {
   children: React.ReactNode;
 }

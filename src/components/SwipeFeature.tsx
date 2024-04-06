@@ -1,14 +1,16 @@
-// SwipeFeature.tsx
 import { useState, useEffect } from 'react';
 import Recommendation from './Recommendation';
 import { UserProfile } from '../interfaces';
+import { generateRandomUserProfile } from '../utils/generateRamdomUserProfile';
 
 interface SwipeFeatureProps {
-  onLogout: () => void; 
+  onLogout: () => void;
 }
 
 const SwipeFeature = ({ onLogout }: SwipeFeatureProps) => {
   const [recommendations, setRecommendations] = useState<UserProfile[]>([]);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentGender, setCurrentGender] = useState<'Male' | 'Female'>('Male');
 
   useEffect(() => {
     fetchRecommendations();
@@ -16,33 +18,45 @@ const SwipeFeature = ({ onLogout }: SwipeFeatureProps) => {
 
   const fetchRecommendations = async () => {
     try {
-      const response = await fetch('./db.json');
-      if (!response.ok) {
-        throw new Error('Failed to fetch recommendations');
-      }
-      const data = await response.json();
-      setRecommendations(data.recommendations);
+      const randomRecommendations = Array.from({ length: 10 }, () => generateRandomUserProfile('Male'));
+      setCurrentGender('Male');
+      setRecommendations(randomRecommendations);
     } catch (error) {
       console.error('Error fetching recommendations:', error);
     }
   };
 
   const handleSwipe = (direction: string) => {
-    console.log('Swiped', direction);
-    if (recommendations.length > 0) {
-      setRecommendations(recommendations.slice(1));
+    if (direction === 'Yay') {
+      if (currentIndex < recommendations.length - 1) {
+        setCurrentIndex(currentIndex + 1);
+      } else {
+        const moreRecommendations = Array.from({ length: 9 }, () => generateRandomUserProfile(currentGender));
+        setRecommendations([...recommendations, ...moreRecommendations]);
+      }
+    } else if (direction === 'Nay') {
+      const nextGender = currentGender === 'Male' ? 'Female' : 'Male';
+      setCurrentGender(nextGender);
+      const moreRecommendations = Array.from({ length: 9 }, () => generateRandomUserProfile(nextGender));
+      setRecommendations(moreRecommendations);
     }
   };
 
   return (
     <div>
-      <h1>Swipe Profiles</h1>
+      <h1>Tinder Profile</h1>
       {recommendations.length > 0 ? (
-        <Recommendation profile={recommendations[0]} onSwipe={handleSwipe} />
+        <div>
+          <Recommendation profile={recommendations[currentIndex]} onSwipe={handleSwipe} />
+          <div className="recommendation-buttons">
+            <button className="yay" onClick={() => handleSwipe('Yay')}>Yay</button>
+            <button className="nay" onClick={() => handleSwipe('Nay')}>Nay</button>
+          </div>
+        </div>
       ) : (
         <p>No more recommendations</p>
       )}
-      <button onClick={onLogout}>Logout</button> {/* Add logout button */}
+      <button onClick={onLogout}>Logout</button>
     </div>
   );
 };

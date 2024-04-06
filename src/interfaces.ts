@@ -6,11 +6,10 @@ export interface UserProfile {
     id: number;
     name: string;
     age?: number;
-    gender?: 'male' | 'female';
+    gender?: 'Male' | 'Female';
     city: string;
     university: string;
     interests: string[];
-    imagePath: string;
 }
 
 export interface RecommendationProps {
