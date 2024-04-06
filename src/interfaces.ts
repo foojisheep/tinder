@@ -17,3 +17,9 @@ export interface RecommendationProps {
     profile: UserProfile;
     onSwipe: (direction: string) => void;
 }
+
+export interface SessionData {
+    isLoggedIn: boolean;
+    userId?: string;
+    username?: string;
+}
